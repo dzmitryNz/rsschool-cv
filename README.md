@@ -1,1 +1,1 @@
-##Welcom to My RsSchool repository
+##Welcom to My RS school repository
