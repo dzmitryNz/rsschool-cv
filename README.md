@@ -1,6 +1,6 @@
 # rsschool-cv
 
-JavaScript tasks:
-Calculator
-Gem puzzle
-Virtual keyboard
+## JavaScript tasks:
+#Calculator
+#Gem puzzle
+#Virtual keyboard
