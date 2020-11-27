@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(60, 60, 60);
+    cursor: default;
+    font-size: calc(0.5em + 1vw);
+    text-align: center;
+}
+
+.title {
+    font-size: 1em;
+    color: skyblue;
+    text-align: center;
+}
+
+.bar {
+    height: 4vw;
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    color: silver;
+    font-size: 1.5em;
+}
+
+.infobar {
+    margin: 0 2vw 0 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 30%;
+}
+
+.time::selection {
+    background: transparent;
+}
+
+.time {
+    width: 20%;
+    align-self: center;
+}
+
+.swipe {
+    width: 20%;
+    align-self: center;
+}
+
+.swipe::selection {
+    background: transparent;
+}
+
+.sound, .new, .pause {
+    width: 10%;
+    align-self: center;
+}
+
+.material-icons {
+    font-size: 1em;
+    transition: 0.3s color, 0.3s border;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 0.5vw;
+    margin: 1vw 1vw;
+}
+
+.material-icons::selection {
+    background: transparent;
+}
+
+.material-icons:hover {
+    color: snow;
+    cursor: pointer;
+}
+
+.material-icons:active {
+    color: gray;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.sound::selection {
+    background: transparent;
+}
+
+.menu {
+    width: 20%;
+    align-self: center;
+    transition: 0.3s color, 0.3s border;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 0.5vw;
+}
+
+.menu::selection {
+    background: transparent;
+}
+
+.menu:hover {
+    color: snow;
+    cursor: pointer;
+}
+
+.menu:active {
+    color: gray;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.puzzle-wrapper {
+    position: absolute;
+    top: auto;
+    left: 30vw;
+    background: url(assets/aluminium.jpg);
+    border-radius: 8px;
+}
+
+.puzzle {
+    position: relative;
+    top: 0.2vw;
+    left: 0.2vw;
+    align-self: center;
+    vertical-align: middle;
+    width: 40vw;
+    height: 40vw;
+    padding: 0.5vw 0.5vw;
+}
+
+.gem_element3,
+.gem_element4,
+.gem_element5,
+.gem_element6,
+.gem_element7,
+.gem_element8 {
+    margin: 0.5vw 0.5vw;
+    border-radius: 0.7vw;
+    border: 1px solid silver;
+    background: #eee;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    font-weight: 900;
+    transition: all 0.5s;
+}
+
+.gem_element3 {
+    height: 12.7vw;
+    width: 12.7vw;
+    font-size: 5em;
+}
+
+.gem_element4 {
+    height: 9.6vw;
+    width: 9.6vw;
+    font-size: 3em;
+}
+
+.gem_element5 {
+    height: 7.5vw;
+    width: 7.5vw;
+    font-size: 3em;
+}
+
+.gem_element6 {
+    height: 6.4vw;
+    width: 6.4vw;
+    font-size: 2.5em;
+}
+
+.gem_element7 {
+    height: 5.5vw;
+    width: 5.5vw;
+    font-size: 1.5em;
+}
+
+.gem_element8 {
+    height: 4.7vw;
+    width: 4.7vw;
+    font-size: 1.5em;
+}
+
+.empty3,
+.empty4,
+.empty5,
+.empty6,
+.empty7,
+.empty8 {
+    margin: 0.5vw 0.5vw;
+    position: absolute;
+    visibility: hidden;
+}
+
+.empty3 {
+    height: 16vw;
+    width: 16vw;
+}
+
+.empty4 {
+    height: 12vw;
+    width: 12vw;
+}
+
+.empty5 {
+    height: 9.6vw;
+    width: 9.6vw;
+}
+
+.empty6 {
+    height: 8vw;
+    width: 8vw;
+}
+
+.empty7 {
+    height: 6.85vw;
+    width: 6.85vw;
+}
+
+.empty8 {
+    height: 6vw;
+    width: 6vw;
+}
+
+
+.hide {
+  display: none;  
+}
+
+.hovered {
+    background-color: #bbb;
+}
+
+.empty3::selection,
+.empty4::selection,
+.empty5::selection,
+.empty6::selection,
+.empty7::selection,
+.empty8::selection,
+.gem_element3::selection,
+.gem_element4::selection,
+.gem_element5::selection,
+.gem_element6::selection,
+.gem_element7::selection,
+.gem_element8::selection {
+    background: transparent;
+}
+
+.gem_element3:hover,
+.gem_element4:hover,
+.gem_element5:hover,
+.gem_element6:hover,
+.gem_element7:hover,
+.gem_element8:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+dialog {
+    position: relative;
+    top: 2.2em;
+    left: 25vw;
+    align-self: center;
+    vertical-align: middle;
+    width: 50vw;
+    height: 44.5vw;
+    border-radius: 0.9vw;
+    border: none;
+    opacity: 0.8;
+    background-color: #000;
+    padding: 0;
+    color: yellowgreen;
+}
+
+.pauseDialog {
+    padding: 1vw 0vw;
+    color: rosybrown;
+}
+
+dialog h2 {
+    color: skyblue;
+    margin: 1vw auto 1vw auto;
+}
+
+dialog h3 {
+    cursor: pointer;
+    margin-top: 0.2em;
+}
+
+dialog h3:hover {
+    color: springgreen;
+}
+
+dialog h3::selection,
+dialog h2::selection,
+dialog button::selection,
+dialog .your::selection {
+    background: transparent;
+}
+
+button {
+    border: 0.1vw solid grey;
+    margin: 3vw auto 1vw;
+    height: 4vh;
+    width: fit-content;
+    padding: 0.1vw 0.5vw;
+    border-radius: 5px;
+    background-color: yellow;
+    font-weight: 900;
+}
+
+.your_name {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 2em 0 2em 0;
+}
+
+.name {
+    margin-left: 1vw;
+    width: 25%;
+    margin-right: 25%;
+    text-align: left;
+}
+
+.name:hover {
+    cursor: pointer;
+}
+
+.your {
+    width: 50%;
+    color: thistle;
+    text-align: right;
+}
+
+/* @media screen and (max-height: 700px) {
+    .title {
+        margin-top: 0vw;
+        display: none;
+    }
+
+    .bar {
+        height: 4vw;
+        width: 40vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        color: silver;
+        font-size: 1.5em;
+    }
+
+    .puzzle-wrapper {
+        left: 30vw;
+    }
+
+    .puzzle {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .gem_element3 {
+        height: 12vw;
+        width: 12vw;
+    }
+    
+    .gem_element4 {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .gem_element5 {
+        height: 9.6vw;
+        width: 9.6vw;
+    }
+    
+    .gem_element6 {
+        height: 8vw;
+        width: 8vw;
+    }
+    
+    .gem_element7 {
+        height: 6.85vw;
+        width: 6.85vw;
+    }
+    
+    .gem_element8 {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .empty3 {
+        height: 16vw;
+        width: 16vw;
+    }
+    
+    .empty4 {
+        height: 10vw;
+        width: 10vw;
+    }
+    
+    .empty5 {
+        height: 9.6vw;
+        width: 9.6vw;
+    }
+    
+    .empty6 {
+        height: 8vw;
+        width: 8vw;
+    }
+    
+    .empty7 {
+        height: 6.85vw;
+        width: 6.85vw;
+    }
+    
+    .empty8 {
+        height: 6vw;
+        width: 6vw;
+    }
+} */
